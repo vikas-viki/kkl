@@ -1,0 +1,198 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel="shortcut icon" href="{% static 'home/images/logo.PNG' %}" />
+    <title>{% block title %}Kavikrishna Laboratory{% endblock %}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="google-site-verification" content="qlDXJGKI5_ljdG2T6M0zO2WGJin6vE48sNccfL8mMYY" />
+
+    <link rel="stylesheet" href="{% static 'home/css/custom-bs.css' %}">
+    <link rel="stylesheet" href="{% static 'home/css/jquery.fancybox.min.css' %}">
+    <link rel="stylesheet" href="{% static 'home/fonts/icomoon/style.css' %}">
+    <link rel="stylesheet" href="{% static 'home/fonts/line-icons/style.css' %}">
+    <link rel="stylesheet" href="{% static 'home/css/lightbox.min.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="{% static 'home/css/style.css' %}">
+  </head>
+  <body style="color:black;">
+
+
+
+
+<div class="site-wrap">
+
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div> <!-- .site-mobile-menu -->
+
+
+    <!-- NAVBAR -->
+    <header class="site-navbar mt-3" id="top" style="margin-top:0px !important; padding-top:1em; background:rgba(211,211,211,0.4);">
+      <div class="container-fluid" style="padding-left:1em; padding-right:1em;">
+        <div class="row align-items-center">
+          <div class="container">
+            <a href="/"><img src="{% static 'home/images/logo.PNG' %}" alt="KaviKrishnaLab" class="img-fluid" style="height:7em; width:7em; float:left"></a>
+            <h1 style="font-size:50px; color:rgb(128,0,128); margin:0px"><b> &nbsp&nbspKAVIKRISHNA LABORATORY (KKL)<br></b></h1>
+            <h1 style="font-size:30px; color:rgba(128,0,128,0.7); margin:0px"><b> &nbsp&nbsp&nbspकविकृष्ण प्रयोगशाला</b></h1>
+          </div>
+          <nav class="mx-auto site-navigation">
+            <b>
+            <ul class="site-menu js-clone-nav d-none d-lg-block" style="font-size: 1.1em;">
+              <li><a href="/" class="nav-link" id="home"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
+              <li class="has-children">
+                <a href="#"><i class="fa fa-info-circle" aria-hidden="true"></i>&nbspAbout</a>
+                <ul class="dropdown">
+                  <li><a href="/about" id="about">Vision and Missions</a></li>
+                  <li><a href="/facility" id="facilities">Facilities</a></li>
+                  <li><a href="/collaborators" id="collaborators">Collaborators</a></li>
+                  <li><a href="/news" id="news">NEWS</a></li>
+                </ul>
+              </li>
+              <li class="has-children">
+                <a href="#"><i class="fa fa-suitcase" aria-hidden="true"></i> Administration</a>
+                <ul class="dropdown">
+                  <li><a href="/bikul-das" id="director">Director's Profile</a></li>
+                  <li><a href="/iec" id="iec">IEC</a></li>
+                  <li><a href="/icscr" id="icscr">IC-SCR</a></li>
+                  <li><a href="/ibsc" id="ibsc">IBSC</a></li>
+                </ul>
+              </li>
+              <li class="has-children">
+                <a href="#"><i class="fa fa-book" aria-hidden="true"></i>&nbspResearch</a>
+                <ul class="dropdown">
+                  <li><a href="/projects" id="projects">Projects</a></li>
+                  <li><a href="/publications" id="publications">Publications</a></li>
+                  <li><a href="/patent" id="patent">Patent</a></li>
+                </ul>
+              </li>
+              <li><a href="/faculty" id="people"><i class="fa fa-users" aria-hidden="true"></i> People</a></li>
+              <li><a href="/academics" id="academics"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Academic Programmes</a></li>
+              <li class="has-children">
+                <a href="#" ><i class="fa fa-clone" aria-hidden="true"></i> Centers</a>
+                <ul class="dropdown">
+                  <li><a href="/ktc" id="ktc">KTC</a></li>
+                  <li><a href="/kkp" id="kkp">KKP</a></li>
+                </ul>
+              </li>
+              <li><a href="/contact" id="contact"><i class="fa fa-phone-square" aria-hidden="true"></i> Contact Us</a></li>
+              <li><a href="https://www.thoreaulab.org/" id="boston"><i class="fa fa-window-restore" aria-hidden="true"></i> Boston Chapter</a></li>
+
+            </ul>
+          </b>
+          </nav>
+
+          <div class="col-6 site-burger-menu d-block d-lg-none text-right">
+            <a href="#" class="site-menu-toggle js-menu-toggle"><span class="icon-menu h1" style="color:black;"></span></a>
+          </div>
+
+        </div>
+      </div>
+    </header>
+
+    <figure class="container-fluid" style=" padding-left:10vw; padding-right:10vw; text-align:center">
+      <img src={% block background_image %}{% endblock %} style="height:60vh; width:100%;" onerror="this.style.display='none'"/>
+      <figcaption style="font-size:1.5em; margin-top:-50px; color:white; background:rgba(0,0,0,0.5); border-radius:4px; position:relative;">{% block background_caption %}{% endblock %}</figcaption>
+    </figure>
+
+    <!-- {% block header %}
+    <section class="home-section section-hero overlay slanted" id="home-section">
+
+      <div class="container">
+        <div class="row align-items-center justify-content-center">
+          <div class="col-md-8 text-center">
+            <h1>{% block page_name %}Kavikrishna Labs{% endblock %}</h1>
+            <div class="mx-auto w-75">
+              <p>Using Stem cells-Microbial Interactions to
+understand Global Health Diseases including Cancer</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a href="#about-us-section" class="scroll-button smoothscroll">
+          <span class=" icon-keyboard_arrow_down"></span>
+      </a>
+
+      </section>
+
+
+
+    {% endblock %} -->
+
+    <div id="about-us-section" >
+    {% block body %}
+
+    {% endblock %}
+    </div>
+
+    <footer class="site-footer slanted-footer">
+
+      <a href="#top" class="smoothscroll scroll-top">
+        <span class="icon-keyboard_arrow_up"></span>
+      </a>
+
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-6 col-md-4 mb-4 mb-md-0">
+            <h3>Kavikrishna Laboratory</h3>
+            <ul class="list-unstyled">
+              <li><a href="/about">About Us</a></li>
+              <li><a href="/projects">Projects</a></li>
+              <li><a href="/faculty">Team</a></li>
+              <li><a href="/contact">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md-4 mb-4 mb-md-0">
+            <h3>Centers</h3>
+            <ul class="list-unstyled">
+              <li><a href="/ktc">KaviKrishna Telemedicine Care</a></li>
+            </ul>
+            <ul class="list-unstyled">
+              <li><a href="/kkp">KaviKrishna Prakash</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md-4 mb-4 mb-md-0">
+            <h3>Quicklinks</h3>
+            <ul class="list-unstyled">
+              <li><a href="/news">NEWS</a></li>
+              <li><a href="/collaborators">Collaborators</a></li>
+              <li><a href="/facility">Facilities</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row text-center">
+          <div class="col-12">
+            <p class="copyright"><small class="block">
+            Copyright &copy; <script>document.write(new Date().getFullYear());</script> All rights reserved | Kavikrishna Laboratory
+            </small></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+    <!-- SCRIPTS -->
+    <script src="{% static 'home/js/jquery.min.js' %}"></script>
+    <script src="{% static 'home/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'home/js/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'home/js/stickyfill.min.js' %}"></script>
+    <script src="{% static 'home/js/jquery.fancybox.min.js' %}"></script>
+    <script src="{% static 'home/js/jquery.easing.1.3.js' %}"></script>
+
+    <script src="{% static 'home/js/jquery.waypoints.min.js' %}"></script>
+    <script src="{% static 'home/js/jquery.animateNumber.min.js' %}"></script>
+    <script src="{% static 'home/js/custom.js' %}"></script>
+    {% block script %}{% endblock %}
+  </body>
+</html>

@@ -1,0 +1,66 @@
+{% extends 'home/base.html' %}
+
+{% load static %}
+
+{% block title %}Projects{% endblock %}
+
+{% block page_name %}PROJECTS{% endblock %}
+
+{% block background_image %}"{% static 'home/images/projects/background.jpg' %}"{% endblock %}
+
+{% block body %}
+<!-- <h2>Projects</h2><br> -->
+<!-- <div class="row mb-5 pt-0 site-section">
+<div class="col-md-5 ml-auto img-overlap">
+  <div class="img-1"><img src="{% static 'home/images/projects/HIF2_alpha_stemness_pathway.jpg' %}" alt="Image" class="img-fluid img-shadow"></div>
+  <div class="img-2"><img src="{% static 'home/images/projects/Sonali_Nokhor_Jui_theme.jpg' %}" alt="Image" class="img-fluid img-shadow"></div>
+</div>
+</div> -->
+
+<section class="site-section about-us-section" id="about-us-section" style="padding-bottom:2rem">
+  <div class="container">
+
+    <div class="row mb-5 pt-0">
+      <div class="col-md-6 align-self-center">
+        <h1 style="font-size:8vh">Projects</h1>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+  <div class="container site-section" style="padding-top:0px;">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="table-responsive">
+          <table class="table table-bordered table-hover" style="margin-top:1rem; font-size:1.5rem; color:black; border:5px solid;">
+            <thead style="border:3px solid;">
+              <tr>
+                <th style="border:3px solid;">Title of project</th>
+                <th style="white-space: nowrap">Name of faculty</th>
+                <th style="border:3px solid;">Funding agency</th>
+                <th style="border:3px solid;">Duration</th>
+                <th style="border:3px solid;">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for project in projects %}
+              <tr style="border:3px solid;">
+                <td style="border:3px solid;">{{project.title}}</td>
+                <td style="border:3px solid;"><p><b>PI:</b>{{project.pi}}</p>
+                    <p><b>Co-PI:</b>{{project.copi}}</p></td>
+                <td style="border:3px solid;">{{project.funding_agency}}</td>
+                <td style="border:3px solid;">{{project.duration}}</td>
+                <td style="border:3px solid;">{{project.status}}</td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

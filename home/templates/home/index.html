@@ -1,0 +1,344 @@
+{% extends 'home/base.html' %}
+
+{% load static %}
+
+{% block title %}Kavikrishna Laboratory{% endblock %}
+
+{% block body %}
+
+<!-- whats happening hover card -->
+<style media="screen">
+  .card{
+    transition: all 0.5s;
+  }
+  .card:hover{
+    transform: scale(1.07);
+  }
+</style>
+
+<figure style="margin-top:50px">
+  <img src="{% static 'home/images/index/b4.jpg' %}" style="height:648px; width:100%; object-fit:cover;" onerror="this.style.display='none'"/>
+</figure>
+
+<!-- ABOUT US -->
+<section class="site-section about-us-section" id="about-us-section" style="margin-top:-610px">
+  <!-- <marquee style="margin-top: -45px;
+    background: rgba(200,200,200,0.3);">
+    <a href="https://www.biorxiv.org/content/10.1101/2020.05.06.077883v1" style="color: red; font-size: 2rem; margin-top: -14px; font-weight: bold;">
+      Kavikrishna's breakthrough findings on coronavirus: Implication in COVID-19
+    </a>
+    <br>
+    <a href="https://youtu.be/4UlDvLvhqVY" style="color: red; font-size: 2rem; margin-top: -14px; font-weight: bold;">
+      21st TALK IN THE NESM TALK SERIES __ Bikul Das, MBBS (MD),PhD
+    </a>
+  </marquee> -->
+
+  <div class="container">
+    <div class="row mb-5 pt-0 site-section" style="margin-bottom:200px">
+      <div class="col-md-12 align-self-center" style="color:white; text-align:center;">
+        <p class="lead" style="font-size:3em"><b><i>Welcome to KaviKrishna Laboratory</i></b></p>
+        <p class="" style="font-size:1.5em"><b><i>A Scientific and Industrial Research Organization (SIRO) Certified Laboratory</i></b></p><br><br>
+        <p class="lead" style="font-size:1.5em"><b><i>"Using stem cells-microbial interaction to understand global health diseases including cancer"</i></b></p>
+        <p class="lead" align="right">-In an interview with Arnab Goswami from Times Now , Dr. Das,<br> founder director of KaviKrishna quoted the following in 2013</p>
+        <p class="lead" style="font-size:1.5em" align="justify"><b><i>“I am interested in the deep evolutionary link between stem cells, cancer and microbes,” said Das. “If we can learn how to control the altruistic behavior of stem cells, we will have a new weapon in our disease fighting arsenal.”</i></b></p>
+      </div>
+    </div>
+
+<!-- Happenings -->
+<hr><br>
+<h3 class="text-primary">What's Happening</h3><br>
+
+<div class="row" style="cursor:pointer; display:flex;">
+  
+  <div class="column" style=" padding: 20px 40px;">
+    <div class="card" style="width: 18rem;">
+      <a href="/static/home/images/index/wh_11.jpg" data-lightbox="mygallery"><img class="card-img-top" src="/static/home/images/index/wh_11.jpg" alt="Card image cap"></a>
+      <div class="card-body">
+        <h5 class="card-title"><a href="https://www.frontiersin.org/articles/10.3389/fimmu.2020.594572/full?&utm_source=Email_to_authors_&utm_medium=Email&utm_content=T1_11.5e1_author&utm_campaign=Email_publication&field=&journalName=Frontiers_in_Immunology&id=594572">Initiation of Post-Primary Tuberculosis of the Lungs</a></h5>
+        <p class="card-text"> Initiation of Post-Primary Tuberculosis of the Lungs: Exploring the Secret Role of Bone Marrow Derived Stem Cells</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column" style=" padding: 20px 40px;">
+    <div class="card" style="width: 18rem;">
+      <a href="/static/home/images/index/wh_10.png" data-lightbox="mygallery"><img class="card-img-top" src="/static/home/images/index/wh_10.png" alt="Card image cap"></a>
+      <div class="card-body">
+        <h5 class="card-title"><a href="https://youtu.be/4UlDvLvhqVY">21st TALK IN THE NESM TALK SERIES __ Bikul Das, MBBS (MD),PhD</a></h5>
+        <p class="card-text"> Dr. Bikul Das narrated the journey of KaviKrishna Laboratory from Vedic Altruism to Stem cell altruism in North East Science Movement</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column" style=" padding: 20px 40px;">
+    <div class="card" style="width: 18rem;">
+      <a href="/static/home/images/index/covid.jpg" data-lightbox="mygallery"><img class="card-img-top" src="/static/home/images/index/covid.jpg" alt="Card image cap"></a>
+      <div class="card-body">
+        <h5 class="card-title"><a href="https://www.biorxiv.org/content/10.1101/2020.05.06.077883v1">Kavikrishna's breakthrough findings on coronavirus: Implication in COVID-19</a></h5>
+        <p class="card-text"> Corona virus activates a stem cell mediated defense mechanism that accelerates activation of dormant tuberculosis: implications for the COVID-19 pandemic</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column" style=" padding: 20px 40px;">
+    <div class="card" style="width: 18rem;">
+      <a href="/static/home/images/index/wh1.jpg" data-lightbox="mygallery"><img class="card-img-top" src="/static/home/images/index/wh1.jpg" alt="Card image cap"></a>
+      <div class="card-body">
+        <h5 class="card-title">Sonali Nokhor Jui</h5>
+        <p class="card-text"> It has been published on 3rd Feb, 2020 during Assam Sahitya Sabha, Sualkuchi Adhibeshon. Hem Bhai inaugurated the Book in the "Sunali Nokhor Jui": Krishna Ram Das Kabi Sanmilan.</p>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="column" style="padding: 20px 40px;">
+    <div class="card" style="width: 18rem;">
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <a href="/static/home/images/index/wh2_1.jpg" data-lightbox="mygallery"><img class="card-img-top" src="/static/home/images/index/wh2_1.jpg" alt="Card image cap"></a>
+            </div>
+            <div class="carousel-item">
+              <a href="/static/home/images/index/wh2_2.jpg" data-lightbox="mygallery"><img class="card-img-top" src="/static/home/images/index/wh2_2.jpg" alt="Card image cap"></a>
+            </div>
+            <div class="carousel-item">
+              <a href="/static/home/images/index/wh2_3.jpg" data-lightbox="mygallery"><img class="card-img-top" src="/static/home/images/index/wh2_3.jpg" alt="Card image cap"></a>
+            </div>
+          </div>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">KaviKrishna Living museum</h5>
+        <p class="card-text">It is functional now. People from different places of India and students of educational institutes are visiting the museum. Our demonstrator is delivering lectures and demonstrating the students.</p>
+        <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+      </div>
+    </div>
+  </div>
+
+
+  <div class="column" style="padding: 20px 40px;">
+    <div class="card" style="width: 18rem;">
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="4" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <a href="/static/home/images/index/wh3_1.jpg" data-lightbox="mygallery"><img class="card-img-top" src="/static/home/images/index/wh3_1.jpg" alt="Card image cap"></a>
+            </div>
+            <div class="carousel-item">
+              <a href="/static/home/images/index/wh3_2.jpg" data-lightbox="mygallery"><img class="card-img-top" src="/static/home/images/index/wh3_2.jpg" alt="Card image cap"></a>
+            </div>
+            <div class="carousel-item">
+              <a href="/static/home/images/index/wh3_3.jpg" data-lightbox="mygallery"><img class="card-img-top" src="/static/home/images/index/wh3_3.jpg" alt="Card image cap"></a>
+            </div>
+          </div>
+          <!-- <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a> -->
+        </div>
+      <div class="card-body">
+        <h5 class="card-title">Sahitya Sabha Stall exhibition</h5>
+        <p class="card-text">KaviKrishna has given a stall in Assam Sahitya Sabha, 75th Sualkuchi Adhibeshon.<span id="dots2">...</span><span id="more2" style="display:none;">  We presented our works on literature, Philosophy and Science together. Research Students of KaviKrishna showed fixed cancer cells under microscopes to the visitors, where most of the visitors/students get attracted. People were very excited to see the muga cocoons and pure muga cloths.</span></p>
+        <button class= "spepcial_link" onclick="myFunction2()" id="myBtn2" style="background: none!important; border: none; padding: 0!important;">Read more</button>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="column" style="padding: 20px 40px;">
+    <div class="card" style="width: 18rem;">
+      <a href="/static/home/images/index/wh_7.jpg" data-lightbox="mygallery"><img class="card-img-top" src="/static/home/images/index/wh_7.jpg" alt="Card image cap"></a>
+      <div class="card-body">
+        <h5 class="card-title">Lecture on Vedic Altruism Awarded</h5>
+        <p class="card-text">A lecture on Vedic Altruism by Lekhika Pathak, a PhD student of KaviKrishna Laboratory was awarded the Best Lecture at <span id="dots3">...</span><span id="more3" style="display:none;"> the 8th International Translational Cancer Research Conference at Benaras Hindu University, Varanasi. The lecture was on  how the idea of Vedic Altruism is leading to finding of different stemness pathaways in cancer stem cell.</span></p>
+        <button class= "spepcial_link" onclick="myFunction3()" id="myBtn3" style="background: none!important; border: none; padding: 0!important;">Read more</button>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="column" style="padding: 20px 40px;">
+    <div class="card" style="width: 18rem;">
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="7" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="8"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <a href="/static/home/images/index/wh4_2.jpg" data-lightbox="mygallery"><img class="card-img-top" src="/static/home/images/index/wh4_2.jpg" alt="Card image cap"></a>
+            </div>
+            <div class="carousel-item">
+              <a href="/static/home/images/index/wh4_1.jpg" data-lightbox="mygallery"><img class="card-img-top" src="/static/home/images/index/wh4_1.jpg" alt="Card image cap"></a>
+            </div>
+          </div>
+          <!-- <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a> -->
+        </div>
+      <div class="card-body">
+        <h5 class="card-title"> Arya College Exhibition</h5>
+        <p class="card-text">Communicated and presented our cancer research, cancer patient rehabilitation with cancer patients of BBCI and students, teachers of the colleges.</p>
+        <!-- <button class= "spepcial_link" onclick="myFunction2()" id="myBtn2" style="background: none!important; border: none; padding: 0!important;">Read more</button> -->
+      </div>
+    </div>
+  </div>
+
+
+  <div class="column" style="padding: 20px 40px;">
+    <div class="card" style="width: 18rem;">
+      <a href="/static/home/images/index/wh_5.jpg" data-lightbox="mygallery"><img class="card-img-top" src="/static/home/images/index/wh_5.jpg" alt="Card image cap"></a>
+      <div class="card-body">
+        <h5 class="card-title">Mahindri Divas Celebration</h5>
+        <p class="card-text">KaviKrishna has celebrated Mahindri divas for second time on 14th March.<span id="dots4">...</span><span id="more4" style="display:none;"> Mahindri Das is the patron of the organisation. The team members of KaviKrishna has initiated and organised herbal plantation at SriSri Iswar Hatisatra ground on this precious occasion. The Deka Satradhikar Sri Rajib Losan Santa has inaugarated the program by planting herbal medicinal plant.</span></p>
+        <button class= "spepcial_link" onclick="myFunction4()" id="myBtn4" style="background: none!important; border: none; padding: 0!important;">Read more</button>
+      </div>
+    </div>
+  </div>
+  <div class="column" style="padding: 20px 40px;">
+    <div class="card" style="width: 18rem;">
+      <a href="/static/home/images/index/wh_6.JPG" data-lightbox="mygallery"><img class="card-img-top" src="/static/home/images/index/wh_6.JPG" alt="Card image cap"></a>
+      <div class="card-body">
+        <h5 class="card-title">Inauguration of Baidik Path</h5>
+        <p class="card-text"> Hem Bhai has inaugurated an ancient Baidik Silk Path at Sualkuchi on 3rd Feb, 2020. This road connect ancient Kamrupa and Tibbat.</p>
+        <!-- <button class= "spepcial_link" onclick="myFunction2()" id="myBtn2" style="background: none!important; border: none; padding: 0!important;">Read more</button> -->
+      </div>
+    </div>
+  </div>
+  <div class="column" style="padding: 20px 40px;">
+    <div class="card" style="width: 18rem;">
+      <a href="/static/home/images/index/wh_9.jpg" data-lightbox="mygallery"><img class="card-img-top" src="/static/home/images/index/wh_9.jpg" alt="Card image cap"></a>
+      <div class="card-body">
+        <h5 class="card-title">Dr. Das as Keynote Speaker in Techniche</h5>
+        <p class="card-text">Dr. Bikul Das was invited as the Keynote speaker in the Lecture Series during Techniche 2019, the annual techno-management fest of IIT Guwahati.</p>
+        <!-- <button class= "spepcial_link" onclick="myFunction2()" id="myBtn2" style="background: none!important; border: none; padding: 0!important;">Read more</button> -->
+      </div>
+    </div>
+  </div>
+  <div class="column" style="padding: 20px 40px;">
+    <div class="card" style="width: 18rem;">
+      <a href="/static/home/images/index/wh_8.jpg" data-lightbox="mygallery"><img class="card-img-top" src="/static/home/images/index/wh_8.jpg" alt="Card image cap"></a>
+      <div class="card-body">
+        <h5 class="card-title">Dr. Bikul Das in Techexpo'19</h5>
+        <p class="card-text"> Dr. Bikul Das was one of the judges of <a href="https://techniche.org/techexpo">TechExpo'19</a> during Techniche 2019, the annual techno-management fest of IIT Guwahati.</p>
+        <!-- <button class= "spepcial_link" onclick="myFunction2()" id="myBtn2" style="background: none!important; border: none; padding: 0!important;">Read more</button> -->
+      </div>
+    </div>
+  </div>
+</div>
+<br><br>
+
+<!-- Annual report -->
+    <!-- <hr><br><br>
+    <h2 style="text-align: center;"><a href="#" style="text-decoration:none;">Annual report 2019</a></h2><br><br> -->
+
+<!-- No. of patents, projects etc -->
+  <div class="row pb-0 border-top pt-5 block__19738 section-counter" style="justify-content: center;">
+    <div class="col-6 col-md-6 col-lg-3 mb-5 mb-lg-0">
+      <div class="d-flex align-items-center justify-content-center mb-2">
+        <span class="icon-line-mobile mr-3"></span>
+        <strong class="number" data-number="8">8</strong>
+      </div>
+      <span class="caption">Projects</span>
+    </div>
+    <div class="col-6 col-md-6 col-lg-3 mb-5 mb-lg-0">
+      <div class="d-flex align-items-center justify-content-center mb-2">
+        <span class="icon-line-lightbulb mr-3"></span>
+        <strong class="number" data-number="7">7</strong>
+      </div>
+      <span class="caption">PhDs</span>
+    </div>
+    <div class="col-6 col-md-6 col-lg-3 mb-5 mb-lg-0">
+      <div class="d-flex align-items-center justify-content-center mb-2">
+        <span class="icon-line-trophy mr-3"></span>
+        <strong class="number" data-number="6">6</strong>
+      </div>
+      <span class="caption">Publications</span>
+    </div>
+  </div>
+</section>
+
+
+
+<script type="text/javascript">
+  function myFunction1() {
+  var dots = document.getElementById("dots1");
+  var moreText = document.getElementById("more1");
+  var btnText = document.getElementById("myBtn1");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more";
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less";
+    moreText.style.display = "inline";
+  }
+}
+function myFunction2() {
+var dots = document.getElementById("dots2");
+var moreText = document.getElementById("more2");
+var btnText = document.getElementById("myBtn2");
+
+if (dots.style.display === "none") {
+  dots.style.display = "inline";
+  btnText.innerHTML = "Read more";
+  moreText.style.display = "none";
+} else {
+  dots.style.display = "none";
+  btnText.innerHTML = "Read less";
+  moreText.style.display = "inline";
+}
+}
+function myFunction3() {
+var dots = document.getElementById("dots3");
+var moreText = document.getElementById("more3");
+var btnText = document.getElementById("myBtn3");
+
+if (dots.style.display === "none") {
+  dots.style.display = "inline";
+  btnText.innerHTML = "Read more";
+  moreText.style.display = "none";
+} else {
+  dots.style.display = "none";
+  btnText.innerHTML = "Read less";
+  moreText.style.display = "inline";
+}
+}
+function myFunction4() {
+var dots = document.getElementById("dots4");
+var moreText = document.getElementById("more4");
+var btnText = document.getElementById("myBtn4");
+
+if (dots.style.display === "none") {
+  dots.style.display = "inline";
+  btnText.innerHTML = "Read more";
+  moreText.style.display = "none";
+} else {
+  dots.style.display = "none";
+  btnText.innerHTML = "Read less";
+  moreText.style.display = "inline";
+}
+}
+
+</script>
+
+{% endblock %}

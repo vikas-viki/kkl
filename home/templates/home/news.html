@@ -1,0 +1,51 @@
+{% extends 'home/base.html' %}
+
+{% load static %}
+
+{% block title %}NEWS{% endblock %}
+
+{% block page_name %}NEWS{% endblock %}
+
+{% block background_image %}"{% static 'home/images/news/background.jpg' %}"{% endblock %}
+
+{% block body %}
+<style>
+@keyframes blinker {
+50% {
+  opacity: 0;
+}
+}
+
+</style>
+
+<section class="site-section">
+  <div class="container">
+    <div class="row mb-5">
+      <div class="col-12 text-center" data-aos="fade">
+        <h1 class="section-title mb-3"  style="margin:0px; font-size:8vh;"><b>KaviKrishna Lab in NEWS</b></h1>
+      </div>
+    </div>
+    <div class="row">
+      {% for news in newss %}
+      <div class="col-md-6 col-lg-6 mb-4">
+        <div class="block__86547 d-block d-xl-flex align-items-stretch">
+          <figure class="img" style="background-image: url('{% static news.image.url|slice:'12:' %}')">
+          </figure>
+          <div class="h-100">
+            {% now "Y" as cur_year %}
+            {% if news.date|date:'Y' == cur_year %}
+              <p style="color: red; animation: blinker 1s linear infinite;"><b>NEW !</b></p>
+            {% endif %}
+            <h3 class="mb-4"><a href="{{news.link}}" target='_blank'>{{news.headline}}</a></h3>
+            <div class="block__27192 d-flex pt-1 border-top">
+              <a href="{{news.link}}" target='_blank'><span class="icon-person"></span>{{news.writer}}</a>
+              <a href="{{news.link}}" target='_blank'><span class="icon-calendar-o"></span>{{news.date}}</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endblock %}

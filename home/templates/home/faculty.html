@@ -1,0 +1,158 @@
+{% extends 'home/base.html' %}
+
+{% load static %}
+
+{% block title %}Team {% endblock %}
+
+{% block page_name %}OUR TEAM{% endblock %}
+
+{% block background_image %}"{% static 'home/images/people/background.jpg' %}"{% endblock %}
+
+{% block body %}
+
+<style>
+    /*
+    flip card
+    */
+    /* .col-sm-4{
+        height: 300%;
+    } */
+
+    a {
+        transition: .25s all;
+    }
+
+    .card {
+        overflow: hidden;
+
+        transition: .25s box-shadow;
+
+
+    }
+
+    .card-inverse .card-img-overlay {
+        background-color: rgba(#333, .85);
+        border-color: rgba(#333, .85);
+    }
+
+    .card-flip>div {
+        backface-visibility: hidden;
+        transition: transform 300ms;
+        transition-timing-function: linear;
+        width: 100%;
+        height: 300%;
+        margin: 0;
+        display: flex;
+    }
+
+    .card-front {
+        transform: rotateY(0deg);
+    }
+
+    .card-back {
+        transform: rotateY(180deg);
+        position: absolute;
+        top: 0;
+    }
+
+    .card-flip:hover .card-front {
+        transform: rotateY(-180deg);
+    }
+
+    .card-flip:hover .card-back {
+        transform: rotateY(0deg);
+    }
+</style>
+
+<section class="site-section block__62272" id="portfolio-section">
+
+
+    <div class="container">
+        <div class="row mb-3">
+            <div class="col-12 text-center" data-aos="fade">
+              <h1 class="section-title mb-3" style="margin:0px; font-size:8vh;"><b>Our Team</b></h1>
+            </div>
+        </div>
+
+        <div class="row justify-content-center mb-5" data-aos="fade-up">
+            <div id="filters" class="filters text-center button-group col-md-7">
+                <button class="btn btn-primary active" data-filter="*">All</button>
+                <button class="btn btn-primary" data-filter=".3">Research Investigator</button>
+                <button class="btn btn-primary" data-filter=".1">PhD students</button>
+                <button class="btn btn-primary" data-filter=".2">Alumni</button>
+                <button class="btn btn-primary" data-filter=".4">Other Members</button>
+            </div>
+        </div>
+
+        <div id="posts" class="row no-gutter">
+          {% for facult in faculty %}
+          {% if facult.category == '3' %}
+            <div class="item {{facult.category}} " style="width: 20rem;height: 20rem; margin:20px">
+                <div class="card card-flip h-100">
+                    <div class="card-front ">
+                        <div class="card-body">
+
+                            <h3 class="card-title">{{facult.first_name}} {% if facult.middle_name %}{{facult.middle_name}} {% endif %}{{facult.last_name}}</h3>
+                            <img src="{% static facult.image.url|slice:'23:' %}" style="object-fit:cover; float:right; height:auto; width:50%">
+                            <p class="card-text">{{facult.research_interests}}
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card card-back bg-white">
+                        <div class="card-body">
+                            <h3 class="card-title">{{facult.designation}}</h3>
+                            {% if facult.bio %}<p class="card-text">{{facult.bio}}</p>{% endif %}
+                            <p>Email: {{facult.email}}</p>
+                            {% if facult.phone %}<p>Ph.No: {{facult.phone}}</p>{% endif %}
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+          {% endif %}
+          {% endfor %}
+
+          {% for facult in faculty %}
+          {% if facult.category != '3' %}
+          <div class="item {{facult.category}} " style="width: 20rem;height: 20rem; margin:20px">
+              <div class="card card-flip h-100">
+                  <div class="card-front ">
+                      <div class="card-body">
+
+                          <h3 class="card-title">{{facult.first_name}} {% if facult.middle_name %}{{facult.middle_name}} {% endif %}{{facult.last_name}}</h3>
+                          <img src="{% static facult.image.url|slice:'23:' %}" style="object-fit:cover; float:right; height:auto; width:50%">
+                          <p class="card-text">{{facult.research_interests}}
+                          </p>
+                      </div>
+                  </div>
+                  <div class="card card-back bg-white">
+                      <div class="card-body">
+                          <h3 class="card-title">{{facult.designation}}</h3>
+                          {% if facult.bio %}<p class="card-text">{{facult.bio}}</p>{% endif %}
+                          <p>Email: {{facult.email}}</p>
+                          {% if facult.phone %}<p>Ph.No: {{facult.phone}}</p>{% endif %}
+
+                      </div>
+                  </div>
+              </div>
+          </div>
+          {% endif %}
+          {% endfor %}
+        </div>
+    </div>
+
+</section>
+
+
+
+{% endblock %}
+
+
+{% block script %}
+<script>
+    $('.flip').hover(function () {
+        $(this).find('.card').toggleClass('flipped');
+
+    });
+</script>
+{% endblock %}

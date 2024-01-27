@@ -1,0 +1,400 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  /*  font-family: 'Arimo', sans-serif;*/
+}
+
+body {
+  background-color: rgb(220, 220, 220);
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 90%;
+  margin: 0 auto;
+ /* -webkit-box-shadow: 1px 0 15px 0px rgb(5, 5, 5);
+  box-shadow: 1px 0 15px 0px rgb(5, 5, 5);
+  -webkit-box-shadow: 0px 0 15px 0px rgb(5, 5, 5);
+  box-shadow: 0px 0 15px 0px rgb(5, 5, 5)*/;
+  background-color: white;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 2rem;
+  font-family: 'Pontano Sans', sans-serif;
+  font-size: 1.5rem;
+  /*    background: rgb(12, 71, 105);*/
+  background: -webkit-gradient(linear-gradient(to bottom, rgb(47, 111, 130) , rgb(65, 166, 196)));
+  background: linear-gradient(rgb(47, 111, 130) , rgb(65, 166, 196));
+  color: rgb(255, 255, 255);
+}
+
+nav {
+  /*background: -webkit-gradient(linear, left top, left bottom, from(rgb(7, 40, 59)), to(rgb(9, 52, 77)));
+  background: linear-gradient(rgb(7, 40, 59), rgb(9, 52, 77));*/
+  background: rgb(41, 92, 80);
+  color: rgb(255, 255, 255);
+  font-family: 'Pontano Sans', sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+nav label,
+#toggle {
+  display: none;
+}
+
+nav a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+nav .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+nav .dropdown {
+  position: relative;
+  cursor: pointer;
+}
+
+nav .submenu {
+  display: none;
+  /*
+    background: -webkit-gradient(linear, left top, left bottom, from(rgb(7, 40, 59)), to(rgb(9, 52, 77)));
+    background: linear-gradient(rgb(7, 40, 59), rgb(9, 52, 77));
+*/
+  background: rgb(47, 111, 130, 0.8);
+  text-shadow: 1px 1px 2px rgb(4, 23, 35);
+  color: rgb(255, 255, 255);
+  position: absolute;
+  top: 3rem;
+  left: 0.1rem;
+  width: 15.5rem;
+  z-index: 100;
+}
+
+nav .submenu-item:hover {
+  background: -webkit-gradient(linear-gradient(to bottom, rgb(47, 111, 130) , rgb(65, 166, 196)));
+  background: linear-gradient(rgb(47, 111, 130) , rgb(65, 166, 196));
+}
+
+nav .dropdown:hover .submenu {
+
+  display: -webkit-box;
+
+  display: -ms-flexbox;
+
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+
+/*
+nav .submenu {
+    display: none;
+}
+*/
+
+nav a {
+  font-weight: bold;
+  font-size: 1rem;
+  text-decoration: none;
+  text-align: center;
+  color: inherit;
+  padding: 1rem;
+
+}
+
+nav .menu:hover {
+   background: -webkit-gradient(linear-gradient(to bottom, rgb(47, 111, 130) , rgb(65, 166, 196)));
+  background: linear-gradient(rgb(47, 111, 130) , rgb(65, 166, 196));
+  text-shadow: 1px 1px 2px rgb(4, 23, 35);
+}
+
+main {
+  margin-top: 20px;
+}
+
+main .publications{
+  padding-left: 25px;
+}
+
+main .more{
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: :10px;
+}
+
+main a{
+background-image:linear-gradient(rgb(47, 111, 130), rgb(65, 166, 196));
+background-origin:padding-box;
+color:rgb(255, 255, 255);
+cursor:pointer;
+font-family:Arial, heveltica, sans-serif;
+font-weight:700;
+height:50px;
+margin: 5px;
+padding: 5px;
+text-decoration-line:none;
+width:165.542px;
+-webkit-box-direction:normal;
+}
+
+
+
+
+
+/*----Footer----*/
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background: -webkit-gradient(linear-gradient(to bottom, rgb(47, 111, 130) , rgb(65, 166, 196)));
+  background: linear-gradient(rgb(47, 111, 130) , rgb(65, 166, 196));
+  text-shadow: 1px 1px 2px rgb(4, 23, 35);
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.footer{
+  float: right;
+}
+
+.footer ul li{
+  padding-left: 60px;
+  padding-right: 60px;
+  display: inline-block;
+  list-style: none;
+}
+
+.footer ul li a{
+  color: white;
+  font-family: 'Pontano Sans', sans-serif;
+  text-decoration: none;
+
+}
+
+/*----Media----*/
+
+@media screen and (max-width:1050px) {
+  .slider-container {
+    min-height: 410px;
+
+  }
+
+  main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .column-left {
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
+  }
+  .column-right {
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
+  }
+}
+
+@media screen and (max-width:900px) {
+
+  .container {
+    width: 90%;
+  }
+  .slider-container {
+    min-height: 370px;
+  }
+
+
+}
+@media screen and (max-width:800px) {
+
+  .container {
+    width: 100%;
+  }
+
+  .slider-container {
+    min-height: 320px;
+  }
+}
+
+@media screen and (max-width:750px) {
+
+  nav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  nav label {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    cursor: pointer;
+    text-align: left;
+    padding: 0.5rem 1rem;
+    font-size: 2rem;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+  }
+
+  nav .menu > a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    -webkit-box-pack: left;
+    -ms-flex-pack: left;
+    justify-content: left;
+  }
+  nav .menu {
+    display: none;
+    position: static;
+  }
+  nav .dropdown:hover {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgb(7, 40, 59)), to(rgb(9, 52, 77)));
+    background: linear-gradient(rgb(7, 40, 59), rgb(9, 52, 77));
+    text-shadow: 1px 1px 2px rgb(4, 23, 35);
+  }
+  nav .submenu {
+    position: static;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgb(7, 40, 59)), to(rgb(9, 52, 77)));
+    background: linear-gradient(rgb(7, 40, 59), rgb(9, 52, 77));
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    margin-left: -1rem;
+    margin-top: 3rem;
+  }
+
+  nav .submenu-item:hover {
+    background: rgb(12, 71, 105);
+    text-shadow: 1px 1px 2px rgb(4, 23, 35);
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+
+  #toggle:checked ~ .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .column-left {
+    margin-left: 0.2rem;
+    margin-right: 0.2rem;
+  }
+  .column-right {
+    margin-left: 0.2rem;
+    margin-right: 0.2rem;
+  }
+  .cfn-logo,
+  .iitg-logo {
+    width: 5rem;
+  }
+
+  .header-title h1 {
+    font-size: 2rem;
+    text-shadow: 1px 1px 2px rgb(4, 23, 35);
+  }
+
+  .header-title h4 {
+    font-size: 1rem;
+    text-shadow: 1px 1px 2px rgb(4, 23, 35);
+  }
+}
+
+
+@media screen and (max-width:520px) {
+
+  .iitg-logo,
+  .cfn-logo {
+    width: 4rem;
+  }
+
+  header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+  }
+
+
+  .header-title h1 {
+    font-size: 1.75rem;
+    text-shadow: 1px 1px 2px rgb(4, 23, 35);
+  }
+
+  .header-title h4 {
+    font-size: 1.0rem;
+    text-shadow: 1px 1px 2px rgb(4, 23, 35);
+  }
+  nav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+}
+
+@media screen and (max-width:420px) {
+  .slider-container {
+    min-height: 300px;
+  }
+}
+
+@media screen and (max-width:370px) {
+  .slider-container {
+    min-height: 270px;
+  }
+}
+
+@media screen and (max-width:340px) {
+  .slider-container {
+    min-height: 200px;
+  }
+}

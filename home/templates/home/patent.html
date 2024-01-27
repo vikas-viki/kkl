@@ -1,0 +1,42 @@
+{% extends 'home/base.html' %}
+
+{% load static %}
+
+{% block title %}Patents{% endblock %}
+
+{% block page_name %}PATENTS{% endblock %}
+
+{% block background_image %}"{% static 'home/images/projects/background.jpg' %}"{% endblock %}
+
+{% block body %}
+  <div class="container site-section">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="table-responsive">
+          <table class="table table-bordered table-hover" style=" font-size:1.5rem; color:black; border:5px solid; margin-top:1em;">
+            <h1 style="font-size:8vh">Patents</h1>
+            <thead>
+              <tr>
+                <th style="border:3px solid;">Title</th>
+                <th style="border:3px solid;">Application year</th>
+                <th style="border:3px solid;">Present status</th>
+                <th style="border:3px solid;">Patent type</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for patent in patents %}
+              <tr>
+                <td style="border:3px solid;">{{patent.title}}</td>
+                <td style="border:3px solid;">{{patent.app_year}}</td>
+                <td style="border:3px solid;">{{patent.status}}</td>
+                <td style="border:3px solid;">{{patent.type}}</td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {% endblock %}

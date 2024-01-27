@@ -1,0 +1,44 @@
+{% extends 'home/base.html' %}
+
+{% load static %}
+
+{% block title %}Facilities{% endblock %}
+
+{% block page_name %}FACILITIES{% endblock%}
+
+{% block background_image %}"{% static 'home/images/facilities/background.jpg' %}"{% endblock %}
+
+{% block body %}
+
+
+<style>
+  .pic{
+    transition: 1s;
+  }
+  .pic:hover{
+    transform: scale(1.2);
+  }
+</style>
+<div class="container">
+  <div class="row site-section">
+      <div class="col-12 text-center" data-aos="fade">
+        <h1 style="font-size:8vh; margin-bottom:10px;">Facilities</h1>
+      </div>
+
+    {% for facility in facilities %}
+    <div class="col-md-6 col-lg-12 mb-4">
+      <div class="block__86547 d-block d-xl-flex align-items-stretch" style="box-shadow: 5px 5px 10px #888; border-radius: 15px;">
+        <div class="h-100">
+          <h3 class="mb-4"><b>{{facility.instrument_name}}</b></h3>
+          <!-- <figure class="img" style="float:left; padding-right:35px; width:35%; height:35%; background-image: url('{% static facility.image.url|slice:'12:' %}')"></figure> -->
+            <img class="pic" style="float:left; padding-right:35px; height:200px;" src="{% static facility.image.url|slice:'12:' %}" alt="">
+            <p style="font-size:1.5em">{{facility.function}}</p>
+            {% if facility.remarks != '-' and facility.remarks != '.' %}
+              <p style="font-size:1.5em">{{facility.remarks}}</p>
+            {% endif %}
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

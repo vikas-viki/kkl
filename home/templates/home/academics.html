@@ -1,0 +1,186 @@
+{% extends 'home/base.html' %}
+
+{% load static %}
+
+{% block title  %}Academics{% endblock %}
+
+{% block page_name %}ACADEMICS{% endblock%}
+
+{% block background_image %}"{% static 'home/images/academics/background.jpg' %}"{% endblock %}
+
+{% block body %}
+<style>
+
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+</style>
+
+<div class="site-section" style="padding: 0.5em;">
+  <div class="row mb-5">
+    <div class="col-12 text-center" data-aos="fade">
+      <h1 style="font-size:8vh">Academic Programs</h1>
+    </div>
+  </div>
+
+  <div style="box-shadow:10px 10px 16px 5px #808080; border-radius:10px; margin:30px;">
+    <div class="tab" style="border-radius:10px 10px 0px 0px;">
+      <button class="tablinks active" onclick="openCity(event, 'PhD Programme')"><b>PhD Programme</b></button>
+      <button class="tablinks" onclick="openCity(event, 'BCIL trainee')"><b>BCIL trainee</b></button>
+      <button class="tablinks" onclick="openCity(event, 'Internship programs')"><b>Internship programs</b></button>
+      <button class="tablinks" onclick="openCity(event, 'Semester Projects')"><b>Semester Projects</b></button>
+    </div>
+
+    <div id="PhD Programme" class="tabcontent" style="display:block; border-radius:0px 0px 10px 10px; ">
+      <h3 style="padding: 1em 1em 1em 0.5em; font-size:2rem"><b>PhD Programme</b></h3>
+                    <div class="row">
+                      <div class="col-md-12 col-lg-12 mb-4">
+                        <div class="block__86547 d-block d-xl-flex align-items-stretch">
+                          <div class="h-100">
+                            <p class="mb-4" >
+                              <img src="{% static 'home/images/academics/phd_1.jpg' %}" style="float:right; width:30%; height:auto;">
+                              <ul style="font-size:1.3rem;">
+                              <li>KaviKrishna has collaborated with different universities and institutes of India and ouside India. These institutes include <b>Gauhati University, Assam Jawaharlal Nehru University, Delhi, Indian Institute of Technology, Guwahati, Harvard University, Massachusetts</b>.</li>
+                              <li>KaviKrishna's research students are affiliated to these universities under co-guideship of <b>Dr. Bikul Das, Principal Investigator of KaviKrishna</b>.</li>
+                              <li>KaviKrishna provides research training to students to become eligible to enroll into <b>PhD, sponsor and guide to successfully complete their PhD</b>.</li>
+                              <li>Students who are enthusiastic to work on <b>stem cell altruism</b> can send their CV and letter of intent to Dr. Das to obtain training under him and KaviKrishna's research team</li>
+                              </ul>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- <div class="col-md-6 col-lg-12 mb-4">
+                        <div class="block__86547 d-block d-xl-flex align-items-stretch">
+                          <div class="h-100">
+                            <p class="mb-4">KaviKrishna provides research training to students to become eligible to enroll into PhD, sponsore and guide to successfully complete their PhD. Students who are enthusiastic to work on stem cell altruism can send their CV and letter of intent to Dr. Das to obtain training under him and KaviKrishna's research team</p>
+                          </div>
+                        </div>
+                      </div> -->
+                    </div>
+    </div>
+
+    <div id="BCIL trainee" class="tabcontent" style="border-radius:0px 0px 10px 10px">
+      <h3 style="padding: 1em 1em 1em 0.5em;  font-size:2rem"><b>BCIL trainee</b></h3>
+                    <div class="row">
+                      <div class="col-md-12 col-lg-12 mb-4">
+                        <div class="block__86547 d-block d-xl-flex align-items-stretch">
+                          <div class="h-100">
+                            <p class="mb-4">
+                              <!-- <img src="{% static 'home/images/academics/background.jpg' %}" style="float:right; width:30%; height:auto;"> -->
+                              <ul style="font-size:1.3rem;">
+                                <li>On behalf of Department of Biotechnology (DBT), Ministry of Science and Technology, Government of India, <b>Biotech Consortium India Limited (BCIL)</b> is implementing BITP since 1993, a scheme of practical industrial training for <b>B.E./ B.Tech./ M.Sc./ M.Tech./ M.V.Sc./ MBA Biotechnology and Bioinformatics students</b>.</li>
+                                <li>The objective of this progamme is to provide <b>industry-specific training</b> to Biotech students for skill development and enhancing their job opportunities in biotech industry.</li>
+                                <li>This programme provides an opportunity to Biotech Industry for training and selecting suitable manpower.</li>
+                                <li>The training period is for <b>six months</b> during which a trainee is <b>paid stipend</b>.</li>
+                                <li>We have been training BCIL trainee since 2018. Until now, 2 BCIL trainee has completed training at KaviKrishna Laboratory.</li>
+                              </ul>
+                             </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- <div class="col-md-6 col-lg-12 mb-4">
+                        <div class="block__86547 d-block d-xl-flex align-items-stretch">
+                          <div class="h-100">
+                            <p class="mb-4">Parashmoni Goswami: Identification of potent herbal chemopreventive agent by using STEM TECH (R) assay        Nihar Ranjan Das: Development of Biochemical test to differentiate pure from impure muga</p>
+                          </div>
+                        </div>
+                      </div> -->
+                    </div>
+    </div>
+
+    <div id="Internship programs" class="tabcontent" style="border-radius:0px 0px 10px 10px">
+      <h3 style="padding: 1em 1em 1em 0.5em; font-size:2rem"><b>Internship programs</b></h3>
+                    <div class="row">
+                      <div class="col-md-12 col-lg-12 mb-4">
+                        <div class="block__86547 d-block d-xl-flex align-items-stretch">
+                          <div class="h-100">
+                            <p class="mb-4">
+                              <img src="{% static 'home/images/academics/ip_2.jpg' %}" style="float:right; width:30%; height:auto;">
+                              <ul style="font-size:1.3rem;">
+                                <li>There are 1/2 months internship programs in KaviKrishna Lab during the whole year.</li>
+                                <li>At a time maximum <b>5 students</b> can join the internship program.</li>
+                                <li>The application form is attached in the website. If someone wants to apply for the internship, they can fill up the form and send to the offcial email address.</li>
+                                <li>If you want to know more about the internship program <a href='https://forms.gle/TNsJEsNFwQmDsx6V6' target = '_blank'>click here</a></li>
+                                <li>We also provided a paid web development internship to three IIT Guwahati students Parag Agrawal, Himprakash and Sudhanshu Jaisinghania for building this website</li>
+                              </ul>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+    </div>
+
+    <div id="Semester Projects" class="tabcontent" style="border-radius:0px 0px 10px 10px">
+      <h3 style="padding: 1em 1em 1em 0.5em; font-size:2rem"><b>Semester Projects</b></h3>
+                    <div class="row">
+                      <div class="col-md-12 col-lg-12 mb-4">
+                        <div class="block__86547 d-block d-xl-flex align-items-stretch">
+                          <div class="h-100">
+                            <p class="mb-4">
+                              <img src="{% static 'home/images/academics/sp_2.jpg' %}" style="float:right; width:30%; height:auto;">
+
+                              <ul style="font-size:1.3rem;">
+                                <li>BSc. And MSc Biotech/Microbio students can have their semester projects based on their research interest and based on resear ch areas available in the lab.</li>
+                                <li>To more about the research projects please visit <a href="/projects">Project</a> page</li>
+                              </ul>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+    </div>
+</div>
+</div>
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+
+{% endblock %}
